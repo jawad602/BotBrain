@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import Link from "next/link";
 import Logout from "./Logout";
 export default function Header() {
-    
+
     return (
         <>
             <div className="flex justify-between items-center px-5 h-20">

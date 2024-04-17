@@ -26,7 +26,7 @@ export default function Login() {
             }
             router.push('/dashboard/course/all');
         } catch (error) {
-            console.log("🚀 ~ handleLogin ~ error:", error)
+            console.log(error)
 
         }
         // Implement your login logic here

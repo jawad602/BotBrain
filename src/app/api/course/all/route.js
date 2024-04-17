@@ -4,7 +4,7 @@ import getMessageData from "@/utils/getMessageData";
 import { connect } from "@/dbConnection/dbConnection";
 connect();
 export async function POST(request) {
-     try {
+    try {
         const req = NextResponse.next()
         // Parse JSON from the request body
         const reqBody = await request.json();
@@ -18,16 +18,16 @@ export async function POST(request) {
 
         // Validate required user information
         if (!userData.userId) {
-            return NextResponse.json(getMessageData(null, "User ID is missing"), {status: 400});
+            return NextResponse.json(getMessageData(null, "User ID is missing"), { status: 400 });
         }
 
         // Query the database for courses
         const courses = await Course.find({ userId: userData.userId });
-        
-        // Return the list of courses
-        return NextResponse.json(getMessageData(courses, "All Courses loaded"), {status: 200});
 
-     } catch (error) {
-        return NextResponse.json(getMessageData(null, error), {status: 400});
-     }
+        // Return the list of courses
+        return NextResponse.json(getMessageData(courses, "All Courses loaded"), { status: 200 });
+
+    } catch (error) {
+        return NextResponse.json(getMessageData(null, error), { status: 400 });
+    }
 }

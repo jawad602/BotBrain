@@ -30,7 +30,7 @@ export async function POST(request) {
         email: reqBody.email,
         password: hashPassword,
     });
-    
+
     try {
         const savedUser = await user.save();
         const { password, ...newUserData } = savedUser;
@@ -47,7 +47,7 @@ export async function POST(request) {
 
 async function updateUserSecurityCode(user, securityCode) {
     await User.updateOne(
-        {_id: user._id},
+        { _id: user._id },
         {
             $set: {
                 securityCode: securityCode,

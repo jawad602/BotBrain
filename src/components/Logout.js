@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 export default function Logout() {
     const router = useRouter();
-    const logout =async  () => {
+    const logout = async () => {
         localStorage.clear();
         try {
             let response = await fetch('/api/user/logout', {

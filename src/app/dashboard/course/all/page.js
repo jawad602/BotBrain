@@ -9,7 +9,7 @@ const columns = [
 ];
 
 export default async function All() {
-    const response = await fetch('http://localhost:3000/api/course/all', {
+    const response = await fetch('/api/course/all', {
         method: 'POST',
         credentials: 'include',
         headers: {

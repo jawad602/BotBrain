@@ -15,11 +15,11 @@ export default function ActivateEmail() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({securityCode, id }),
+                body: JSON.stringify({ securityCode, id }),
             });
             console.log(response);
             response = await response.json();
-            if(response.ok) {
+            if (response.ok) {
                 console.log("Hallo")
                 router.push('/signup');
             }

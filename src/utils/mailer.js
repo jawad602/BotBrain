@@ -27,7 +27,7 @@ export default async function sendMail(user, subject) {
         }
 
         const mailResponse = await transporter.sendMail(mailOptions);
-        return {mailResponse: mailResponse, securityCode, securityCode};
+        return { mailResponse: mailResponse, securityCode, securityCode };
     } catch (error) {
         console.log(error)
         throw new Error(error.message);
