@@ -71,7 +71,7 @@ export default function Login() {
                         onChange={e => setPassword(e.target.value)}
                     />
                     <Typography variant="body2" color="text.secondary" align="left">
-                        Don't have an account? <Link href="/signup">Sign up</Link>
+                        Dont have an account? <Link href="/signup">Sign up</Link>
                     </Typography>
                     <Button
                         type="submit"
